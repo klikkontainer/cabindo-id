@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ChevronDown } from 'lucide-react';
 import { FULL_COMPANY_NAME } from '../constants';
 
 const Contact: React.FC = () => {
@@ -75,13 +75,18 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="group">
                     <label className="block text-sm font-semibold text-gray-600 mb-2 group-focus-within:text-cabindo-primary transition-colors">Jenis Layanan</label>
-                    <select className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-cabindo-primary focus:ring-2 focus:ring-cabindo-primary/20 outline-none transition-all">
-                        <option>Pilih Layanan...</option>
-                        <option>Office Container</option>
-                        <option>Modular Building</option>
-                        <option>Sewa Container</option>
-                        <option>Modifikasi Custom</option>
-                    </select>
+                    <div className="relative">
+                        <select className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-700 focus:border-cabindo-primary focus:ring-2 focus:ring-cabindo-primary/20 outline-none transition-all appearance-none cursor-pointer hover:border-gray-300">
+                            <option value="">Pilih Layanan...</option>
+                            <option>Office Container</option>
+                            <option>Modular Building</option>
+                            <option>Sewa Container</option>
+                            <option>Modifikasi Custom</option>
+                        </select>
+                        <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                            <ChevronDown className="text-gray-400 group-focus-within:text-cabindo-primary transition-colors" size={20} />
+                        </div>
+                    </div>
                 </div>
                 <div className="group">
                     <label className="block text-sm font-semibold text-gray-600 mb-2 group-focus-within:text-cabindo-primary transition-colors">Pesan</label>
